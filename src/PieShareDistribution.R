@@ -4,7 +4,7 @@
 #'
 #' @param M the number of sets of random variables desired
 #'
-#' @param randomnumbers (optional) vector of uniform distributed random numbers that
+#' @param randomnumbers (optional) a matrix of uniform distributed random numbers that
 #'  will be used to derived the weights (M x (N-1) random numbers provided to retrieve MxN weights)
 #'
 #' @return
