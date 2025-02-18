@@ -51,7 +51,7 @@ PieShareDistribution<-function(N,M=1,randomnumbers=NA)
   ww<-array(NA,dim=c(M,N));
   ww[,]<-0; #initially zero
   # derive the first (N-1) weights
-  for (i in (1:N-1))
+  for (i in (1:(N-1)))
   {
     if (i==1){ss<-0     }
     if (i==2){ss<-ww[,1]} # accounts for inability of rowSums to handle 0 or 1 row
