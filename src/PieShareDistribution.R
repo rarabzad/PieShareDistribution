@@ -55,7 +55,7 @@ PieShareDistribution<-function(N,M=1,randomnumbers=NA)
   {
     if (i==1){ss<-0     }
     if (i==2){ss<-ww[,1]} # accounts for inability of rowSums to handle 0 or 1 row
-    if (i>2) {ss<-rowSums(ww[,1:i-1])}
+    if (i>2) {ss<-rowSums(ww[,1:i-1,drop=F])}
     ww[,i]<-( 1.0 - ss ) *( 1.0 - (1.0 - rr[,i])^(1.0/(N-i)) )
   }
   ww[,N] = 1.0-rowSums(ww[,1:N-1,drop=FALSE])
